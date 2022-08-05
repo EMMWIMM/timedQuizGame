@@ -1,0 +1,35 @@
+*{
+/* background-color: #fe7b7b;
+color: #581845; */
+}
+
+.start{
+  border: 10px;
+  border-style: dotted;
+  border-color:#DAF7A6;
+  background-color: #FFC300;
+}
+
+.quiz{
+  border: 10px;
+    border-style: dotted;
+  border-color:#DAF7A6;
+background-color: #FFC300;
+}
+
+.question {
+  border: 10px;
+    border-style: dotted;
+  border-color:#DAF7A6;
+  background-color: #FFC300;
+}
+
+.end {
+  border: 10px;
+    border-style: dotted;
+  border-color:#FFC300;
+}
+
+h1{
+  color: #fe7b7b;
+}
