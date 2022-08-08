@@ -1,6 +1,11 @@
 *{
 /* background-color: #fe7b7b;
 color: #581845; */
+
+}
+body{
+  display: flex;
+  align-items: center;
 }
 
 .start{
@@ -9,6 +14,8 @@ color: #581845; */
   border-color:#DAF7A6;
   background-color: #FFC300;
   padding: 50px;
+  align-items: center;
+  display: flex;
 }
 
 .quiz{
@@ -33,6 +40,11 @@ background-color: #FFC300;
   border-color:#FFC300;
     padding: 50px;
 
+}
+
+.choice {
+  border-style: solid;
+  border-color: #DAF7A6;
 }
 
 h1{

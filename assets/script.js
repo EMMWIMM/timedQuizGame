@@ -5,12 +5,50 @@ var choiceB= document.getElementById('b');
 var choiceC= document.getElementById('c');
 var choiceD= document.getElementById('d');
 var startButton= document.getElementById('start');
-var score= "";
-var initials= document.querySelector("initials")
+var score= 0;
+var initials= document.querySelector(".initials")
+var question= document.querySelector(".question")
+var end= document.querySelector(".end")
+var scoreContainer= document.querySelector(".highscores")
+
+var questions =[
+{
+  question: "what does HTML stand for?",
+  choiceA:"hyper text markup language",
+  choiceB: "HyperLinks and Text markup Languages",
+  choiceC: "home Tool Markup Language",
+  choiceD: " Homicidal Techno murder League",
+  correct: "a",
+}
+
+
+]
+
+var lastQIndex = questions.length - 1;
+var runningQindex = 0;
+
+function renderQ(){
+  var q = questions[runningQindex];
+  question.innerHTML = "<h2>" + q.question + "</h2>";
+  choiceA.innerHTML = q.choiceA ;
+  choiceB.innerHTML = q.choiceB ;
+  choiceC.innerHTML = q.choiceC ;
+  choiceD.innerHTML = q.choiceD ;
+
+}
+
+
 
 // start game/ timer
-startButton.addeventlistener( "click", countdown)
+startButton.addeventlistener( "click", startQuiz)
 //can we have multiple event listeners for one element?
+
+function startQuiz(){
+  start.style.display = "none";
+  countdown();
+  renderQ();
+  quiz.style.display ="block";
+}
 
 
 // wrong answer take away5 seconds
@@ -20,7 +58,21 @@ function wrongA(){}
 // log time in local console memory
 // log correct and incorrect answers
 // choose answer move on
-function checkanswer() {}
+function checkanswer(answer) {
+  if (questions[runningQindex].correct == answer) {
+    score ++;
+  } else {
+wrongA()
+  }
+  if (runningQindex< lastQIndex) {
+    runningQindex++;
+    renderQ();
+
+  } else {
+    endGame();
+  }
+
+}
 
 
 //end game and tkae initials into local storage for highscore board
