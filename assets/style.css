@@ -8,6 +8,7 @@ color: #581845; */
   border-style: dotted;
   border-color:#DAF7A6;
   background-color: #FFC300;
+  padding: 50px;
 }
 
 .quiz{
@@ -15,6 +16,7 @@ color: #581845; */
     border-style: dotted;
   border-color:#DAF7A6;
 background-color: #FFC300;
+  padding: 50px;
 }
 
 .question {
@@ -22,12 +24,15 @@ background-color: #FFC300;
     border-style: dotted;
   border-color:#DAF7A6;
   background-color: #FFC300;
+    padding: 50px;
 }
 
 .end {
   border: 10px;
     border-style: dotted;
   border-color:#FFC300;
+    padding: 50px;
+
 }
 
 h1{

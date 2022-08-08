@@ -2,33 +2,28 @@
 
 <head>
   <title>Quizorinno</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./assets/style.css">
 
 </head>
 
 
 <body>
 
-<div class="start">
+<div class="begin" id="start" onclick=" countdown()">
   Click to start Quiz!
 </div>
 
 
 
-<div class="quiz" >
+<div class="quiz"  style="display: none">
   <div class="timer">
-    <div class="counter">
+    <div id="counter">
 coundownd here
     </div>
-    <div class="bTimeGuage">
-timer bar
-    </div>
-    <div class="timeGuage">
-more timer bar
-    </div>
+
   </div>
 
-  <h1 class="question" > question here</h1>
+  <h1 class="question" style="display: none"> question here</h1>
   <div class="choices">
     <div class="choice" id="a" onclick="checkanswer()">
 aaaaaa
@@ -47,6 +42,9 @@ dddddd
 </div>
 
 <div class="end" >
+  <form class="initials"  action="index.html" method="post">
+
+  </form>
 
 </div>
 
@@ -55,5 +53,7 @@ dddddd
 </div>
 
 
+<script type="text/javascript" src="./assets/script.js">
 
+</script>
 </body>
