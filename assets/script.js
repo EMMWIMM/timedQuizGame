@@ -74,7 +74,7 @@ var questions =[
   question: "8: Compuserve engineer Steve Wilke invented the .gif file format. How did he INTEND for it to be pronounced.",
   choiceC: "Hard G like GIFT",
   choiceD: "Soft G like JIFFY, but he's not a linguist, so he is WRONG!",
-  choiceA: "Silent G : IFT ",
+  choiceA: "Silent G : IF ",
   choiceB: "Seriously any answer other than a HARD G is WRONG",
   correct: "C"
 },
@@ -84,7 +84,7 @@ var questions =[
   choiceB: "1991",
   choiceC: "2000",
   choiceD: "maybe they shouldn't have... ",
-  correct: "c"
+  correct: "b"
 },
 {
   question: "10: How many questions did we come up with before realizing they needed to be JAVASCRIPT questions?",
