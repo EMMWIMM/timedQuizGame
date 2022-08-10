@@ -2,14 +2,14 @@
 
 <head>
   <title>Quizorinno</title>
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/style.css"></link>
 
 </head>
 
 
 <body>
 
-<div class="start" id="start" onclick=" countdown()">
+<div  id="start" onclick="countdown()">
   <h1>Click to start Quiz!</h1>
 </div>
 
@@ -18,32 +18,34 @@
 <div class="quiz"  style="display: none">
   <div class="timer">
     <div id="counter">
-coundownd here
+      countdown here
     </div>
 
   </div>
 
-  <h2 class="question" style="display: none"> question here</h2>
+  <h2 class="question"> question here</h2>
   <div class="choices">
-    <div class="choice" id="a" onclick="checkanswer()">
+    <div class="choice" id="a" onclick="checkanswer('a')">
 aaaaaa
     </div>
-    <div class="choice" id="b" onclick="checkanswer()">
+    <div class="choice" id="b" onclick="checkanswer('b')">
 bbbbbb
     </div>
-    <div class="choice" id="c" onclick="checkanswer()">
+    <div class="choice" id="c" onclick="checkanswer('c')">
 cccccc
     </div>
-    <div class="choice" id="d" onclick="checkanswer()">
+    <div class="choice" id="d" onclick="checkanswer('d')">
 dddddd
     </div>
   </div>
 
 </div>
-
+<br/>
 <div class="end" style="display:none" >
   <form class="initials"  action="index.html" method="post">
-
+    <label for="initials">Initials</label>
+    <input type="text" name="initials" value="">
+    <button type="submit" >SUBMIT</button>
   </form>
 
 </div>
@@ -52,8 +54,6 @@ dddddd
 
 </div>
 
-
-<script type="javascript" src="./assets/script.js">
-
+<script type="text/javascript" src="assets/script.js">
 </script>
 </body>
