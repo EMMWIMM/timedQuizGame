@@ -6,12 +6,12 @@ var choiceC= document.getElementById('c');
 var choiceD= document.getElementById('d');
 var startButton= document.getElementById('start');
 var score= 0;
-var initials= document.querySelector(".initials")
-var question= document.querySelector(".question")
-var end= document.querySelector(".end")
-var scoreContainer= document.querySelector(".highscores")
-var quiz = document.querySelector(".quiz")
-var timeLeft = 180;
+var initials= document.querySelector(".initials");
+var question= document.querySelector(".question");
+var end= document.querySelector(".end");
+var scoreContainer= document.querySelector(".highscores");
+var quiz = document.querySelector(".quiz");
+var timeLeft = 120;
 
 var questions =[
 {
@@ -112,29 +112,21 @@ function renderQ(){
 
 //game timer
 function countdown() {
-  var timeLeft = 60;
-
-  // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var timeInterval = setInterval(function () {
-    // As long as the `timeLeft` is greater than 1
     if (timeLeft > 1) {
-      // Set the `textContent` of `timerEl` to show the remaining seconds
       timerEl.innerHTML = timeLeft + ' seconds remaining';
-      // Decrement `timeLeft` by 1
       timeLeft--;
     } else if (timeLeft === 1) {
-      // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
       timerEl.innerHTML = timeLeft + ' second remaining';
       timeLeft--;
     } else {
-      // Once `timeLeft` gets to 0, set `timerEl` to an empty string
+
       timerEl.textContent = '';
-      // Use `clearInterval()` to stop the timer
       clearInterval(timeInterval);
       // Call the `endGame'
       endGame();
     }
-  }, 6000);
+  }, 1000);
 }
 
 
@@ -167,6 +159,10 @@ function checkanswer(answer) {
     console.log("NICE!");
   } else {
     timeLeft --;
+    timeLeft --;
+    timeLeft --;
+    timeLeft --;
+    timeLeft --;
     console.log("OOPS");
   }
   if (runningQindex< lastQIndex) {
@@ -179,6 +175,7 @@ function checkanswer(answer) {
 
 
 }
+
 
 
 //end game and tkae initials into local storage for highscore board
@@ -195,8 +192,6 @@ if(runningQindex>= lastQIndex || timeLeft == 0){
 
 
 //list highscores
-<<<<<<< HEAD
-=======
 
 
 
@@ -228,4 +223,3 @@ function countdown() {
     }
   }, 1000);
 }
->>>>>>> d155f9552ac079cf81d9d9adfe3de63cbd3a7468
