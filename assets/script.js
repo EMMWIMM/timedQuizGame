@@ -103,10 +103,10 @@ var runningQindex = 0;
 function renderQ(){
   var q = questions[runningQindex];
   question.innerHTML = "<h2>" + q.question + "</h2>";
-  choiceA.innerHTML = q.choiceA ;
-  choiceB.innerHTML = q.choiceB ;
-  choiceC.innerHTML = q.choiceC ;
-  choiceD.innerHTML = q.choiceD ;
+  choiceA.innerHTML = q.choiceA;
+  choiceB.innerHTML = q.choiceB;
+  choiceC.innerHTML = q.choiceC;
+  choiceD.innerHTML = q.choiceD;
 
 }
 
