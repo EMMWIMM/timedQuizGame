@@ -12,7 +12,11 @@ var end= document.querySelector(".end");
 var scoreContainer= document.querySelector(".highscores");
 var quiz = document.querySelector(".quiz");
 var timeLeft = 120;
-
+var points = document.querySelector(".points")
+var pointsEarned = document.querySelector(".pointsEarned")
+var madeIt = document.querySelector(".madeIt")
+var replay = document.getElementById('playAgain')
+var name = document.querySelector(".name")
 var questions =[
 {
   question: "1: What does HTML stand for?",
@@ -172,9 +176,35 @@ function checkanswer(answer) {
   } else {
     endGame();
   }
-
+points.textContent = "points:" + score + "/10"
 
 }
+
+function initialsSubmit(){
+  var initialIN = document.querySelector("#initialIN").value;
+    var yN = localStorage.getItem("initialIN");
+  if (initialIN === "") {
+    displayMessage(" error, initials cannot be blank")
+  }
+  else {
+    localStorage.setItem("initialIN", initialIN);
+    localStorage.setItem("score", score);
+
+    end.style.display = "none";
+    madeIt.style.display = "block";
+
+
+      return;
+  }
+  pointsEarned.textContent = "points:" + score + "/10";
+  name.textContent = initialIN;
+}
+// var yN = localStorage.getItem("initialIN");
+    // renderHS()
+    // console.log(initialIN + "just played the game");
+    //   highS.textContent = score;
+      // name.textContent = yN;
+
 
 
 
@@ -184,21 +214,30 @@ if(runningQindex>= lastQIndex || timeLeft == 0){
   console.log("gameover");
   quiz.style.display = "none";
   end.style.display = "block";
+  console.log(score);
+  name.innerHTML= name;
+  score.innerHTML = score
 }
 
 }
-// bring up input box for initials to be added to HS
 
 
 
 //list highscores
-
+// function renderHS(){
+//
+// madeIt.style.display = "block";
+//   end.style.display = "none";
+//
+//   poin.textContent = score;
+//   name.textContent = yN;
+// }
 
 
 
 //game timer
 function countdown() {
-  console.log("countdown() started");
+  // console.log("countdown() started");
 
 
   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
@@ -223,3 +262,20 @@ function countdown() {
     }
   }, 1000);
 }
+
+
+// function smallCount() {
+//   console.log("countdown() started");
+//   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+//   var timeInterval = setInterval(function () {
+//     var seconds= 10
+//     // As long as the `timeLeft` is greater than 1
+//     if (timeLeft > 1) {
+//       timeLeft--;
+//     } else {
+//       replay.style.display = "block"
+//       // Use `clearInterval()` to stop the timer
+//       clearInterval(timeInterval);
+//     }
+//   }, 1000);
+// }

@@ -47,14 +47,14 @@ background-color: #FFC300;
     border-style: solid;
   border-color:#CCEB94;
   border-radius: 10px;
-    padding: 50px;
+    padding: 70px;
     background-color: #DAF7A6;
     box-shadow: #581845;
 width: 300px;
 height:100px;
-
-
+text-align: center;
 }
+
 input{
   color:#581845;
   width: 70%;
@@ -104,4 +104,24 @@ justify-content: center, space-between;
 h1:hover{
   background-color: #FFDB90;
   border-color: #FFC300;
+}
+
+.madeIt{
+  color: #fe7b7b;
+  font-size: 35px;
+  font-weight: bold;
+  border: 7px;
+    border-style: solid;
+  border-color:#CCEB94;
+  border-radius: 10px;
+    padding: 90px;
+    background-color: #DAF7A6;
+    box-shadow: #581845;
+width: 300px;
+height:50px;
+display: flex;
+align-items: flex-start;
+justify-content: space-around,center;
+
+
 }
