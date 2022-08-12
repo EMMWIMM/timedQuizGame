@@ -174,6 +174,7 @@ function checkanswer(answer) {
     renderQ();
 
   } else {
+    timeLeft=0;
     endGame();
   }
 points.textContent = "points:" + score + "/10"
@@ -181,6 +182,8 @@ points.textContent = "points:" + score + "/10"
 }
 
 function initialsSubmit(){
+event.preventDefault();
+
   var initialIN = document.querySelector("#initialIN").value;
     var yN = localStorage.getItem("initialIN");
   if (initialIN === "") {
@@ -192,11 +195,18 @@ function initialsSubmit(){
 
     end.style.display = "none";
     madeIt.style.display = "block";
-
+name.textContent = yN + " you scored";
   }
-  pointsEarned.textContent = "points:" + score + "/10";
-  name.textContent = initialIN;
+  pointsEarned.textContent = score + "/10 poits!";
+
 }
+
+// function startOver(){
+//   start.style.display = "block";
+//   madeIt.style.display = "none";
+//   end.style.display = "none";
+//   quiz.style.display = "none";
+// }
 // var yN = localStorage.getItem("initialIN");
     // renderHS()
     // console.log(initialIN + "just played the game");
@@ -212,11 +222,12 @@ if(runningQindex>= lastQIndex || timeLeft == 0){
   console.log("gameover");
   quiz.style.display = "none";
   end.style.display = "block";
-  console.log(score);
-  name.innerHTML= name;
-  score.innerHTML = score
+  // console.log(score);
+  // name.innerHTML= name;
+  // score.innerHTML = score;
+} else{
+start.style.display = "block"
 }
-
 }
 
 
