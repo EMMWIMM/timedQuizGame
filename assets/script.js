@@ -11,7 +11,7 @@ var question= document.querySelector(".question");
 var end= document.querySelector(".end");
 var scoreContainer= document.querySelector(".highscores");
 var quiz = document.querySelector(".quiz");
-var timeLeft = 120;
+var timeLeft = 10;
 var points = document.querySelector(".points")
 var pointsEarned = document.querySelector(".pointsEarned")
 var madeIt = document.querySelector(".madeIt")
@@ -218,20 +218,8 @@ if(runningQindex>= lastQIndex || timeLeft == 0){
   name.innerHTML= name;
   score.innerHTML = score
 }
-
 }
 
-
-
-//list highscores
-// function renderHS(){
-//
-// madeIt.style.display = "block";
-//   end.style.display = "none";
-//
-//   poin.textContent = score;
-//   name.textContent = yN;
-// }
 
 
 
